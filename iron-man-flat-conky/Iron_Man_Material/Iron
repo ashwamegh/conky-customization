@@ -1,0 +1,61 @@
+# ORIGINAL CONKY BY Mirza Miftahul Fadillah , modified BY Jesse_Avalos , See me on Eye Candy Linux_  on Google +
+background yes
+use_xft yes
+xftfont Swiss911 UCm BT:size=9
+xftalpha 0.8
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+stippled_borders 0
+border_margin 5
+border_width 1
+default_color black
+default_shade_color 000000
+default_outline_color 000000
+minimum_size 800 800
+maximum_width 800
+gap_x -470
+gap_y 70
+alignment top_right
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
+short_units yes
+text_buffer_size 2048
+use_spacer none
+override_utf8_locale yes
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont TheNautiGal:bold:size=10
+override_utf8_locale yes
+lua_load m6.lua
+lua_draw_hook_pre main_bars
+
+# Color scheme #
+default_color white
+color1 EAEAEA
+color2 000000
+color5 1B1B1B #898988
+
+own_window_argb_value 0
+own_window_argb_visual no
+own_window_colour 000000
+TEXT
+${voffset 5}${offset 75}${font Neos:size10}${time %d %B %Y}
+${voffset 5}${offset 52}$color2${font Swiss911 UCm BT:size=80}${time %I}  ${time %M}
+${voffset -190}${offset 270}${font Swiss911 UCm BT:size=18}${time %S}
+${voffset 82}${offset 45}${font Swiss911 UCm BT:size=16}$color5$memperc%${offset 155}$mem 
+${voffset 33}${offset 75}${font Swiss911 UCm BT:size=16}$color5$cpu%${offset 110}${acpitemp}°C
+
+${image iron.png -s 301x264}
